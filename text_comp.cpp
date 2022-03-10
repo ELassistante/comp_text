@@ -24,10 +24,10 @@ int main () {
     ifstream text_comp ;
     ofstream diff ;
 
-    text_ref.open("test_1.txt") ;
-    text_comp.open("test_2.txt") ;
+    text_ref.open(file_name_1) ;
+    text_comp.open(file_name_2) ;
     diff.open("differences.txt") ;
-
+ 
     while(getline(text_ref >> ws, ref)) {
         if(getline(text_comp >> ws, comp)) {
             cnt++ ;
@@ -36,4 +36,5 @@ int main () {
     }
 
     return 0 ;
+}
 }
